@@ -1,0 +1,47 @@
+name: br_memory
+description: Br. Memory - Alzheimer's Care App
+
+publish_to: 'none'
+version: 1.0.8+9
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_blue_plus: ^1.32.12
+  http: ^1.2.0
+  crypto: ^3.0.6
+  geolocator: ^14.0.2
+  google_maps_flutter: ^2.17.0
+  flutter_webrtc: ^0.12.12+hotfix.1
+  firebase_core: ^3.8.0
+  firebase_messaging: ^15.1.5
+  flutter_local_notifications: ^17.2.4
+  permission_handler: ^11.3.1
+  shared_preferences: ^2.3.3
+  timezone: ^0.9.4
+  font_awesome_flutter: ^10.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/all/
+    - assets/images/splash/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/InterVariable.ttf
+          weight: 400
+        - asset: assets/fonts/InterVariable.ttf
+          weight: 500
+        - asset: assets/fonts/InterVariable.ttf
+          weight: 700
