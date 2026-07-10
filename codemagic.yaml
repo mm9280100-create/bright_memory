@@ -20,5 +20,5 @@ workflows:
       - name: Build iOS for simulator
         script: flutter build ios --simulator
     artifacts:
-      - build/ios/iphoneos/*.app
-      - build/ios/iphoneos/Runner.app
+      - build/ios/iphonesimulator/*.app
+      - build/ios/iphonesimulator/Runner.app
