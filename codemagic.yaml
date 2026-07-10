@@ -18,7 +18,7 @@ workflows:
           pod install --repo-update
           cd $CM_BUILD_DIR
       - name: Build iOS for simulator
-        script: flutter build ios --debug --simulator --no-codesign
+        script: flutter build ios --simulator
     artifacts:
       - build/ios/iphoneos/*.app
       - build/ios/iphoneos/Runner.app
