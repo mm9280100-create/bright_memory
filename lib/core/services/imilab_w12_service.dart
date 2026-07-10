@@ -516,22 +516,11 @@ class ImilabW12Service extends ChangeNotifier {
   void _applyConnectedFallbackReadings() {
     if (_connectedDevice == null) return;
 
-    final seed = _connectedDevice!.remoteId.str.codeUnits.fold<int>(
-      0,
-      (total, codeUnit) => total + codeUnit,
-    );
-
-    _batteryLevel ??= 72 + (seed % 15);
-    _heartRate ??= 76 + (seed % 8);
-    _bloodSugar ??= 96 + (seed % 10).toDouble();
-    _bloodPressure ??= '${118 + (seed % 7)}/${76 + (seed % 5)}';
-    _steps ??= 1800 + (seed % 900);
-    _sleepMinutes ??= 420 + (seed % 45);
-    _temperature ??= 36.4 + ((seed % 4) / 10);
-    _spo2 ??= 97 + (seed % 2);
-    _heartRateMessage = null;
-
-    _recordCurrentMeasurements();
+    // Imilab W12 uses proprietary protocol - no standard Bluetooth health data available
+    // Show a clear message instead of fake data
+    _heartRateMessage = 'Imilab W12: Bluetooth standard data not available. '
+        'Use the watch app for health metrics.';
+    notifyListeners();
   }
 
   (int, int)? _parseBloodPressure(String? value) {

@@ -346,7 +346,7 @@ class _WatchConnectorCard extends StatelessWidget {
                 _WatchMetric(
                   label: 'Battery',
                   value: service.batteryLevel == null
-                      ? context.tr('Not available')
+                      ? context.tr('N/A - Proprietary protocol')
                       : '${service.batteryLevel}%',
                   icon: Icons.battery_full,
                 ),
